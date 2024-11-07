@@ -1,0 +1,190 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@android:color/white"
+    tools:context=".fragments.MyProfileFragment">
+
+    <ImageButton
+        android:id="@+id/backButton"
+        android:layout_width="60dp"
+        android:layout_height="60dp"
+        android:layout_marginStart="10dp"
+        android:layout_marginTop="15dp"
+        android:backgroundTint="#00FFFFFF"
+        android:scaleType="fitXY"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:srcCompat="@drawable/back" />
+
+    <ImageView
+        android:id="@+id/userEditImage"
+        android:layout_width="75dp"
+        android:layout_height="75dp"
+        android:layout_marginTop="16dp"
+        android:layout_marginEnd="168dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:srcCompat="@drawable/default_profile" />
+
+    <Spinner
+        android:id="@+id/spinnerPhoneNumber"
+        android:layout_width="80dp"
+        android:layout_height="50dp"
+        android:layout_marginTop="18dp"
+        android:elevation="10dp"
+        android:background="@drawable/spinner_border"
+        app:layout_constraintStart_toStartOf="@+id/enterUsernameEditText"
+        app:layout_constraintTop_toBottomOf="@+id/phoneNumberText" />
+
+    <EditText
+        android:id="@+id/ageEditText"
+        android:layout_width="335dp"
+        android:layout_height="48dp"
+        android:inputType="text"
+        android:layout_marginTop="12dp"
+        android:background="@drawable/square_edit_text_background"
+        app:layout_constraintStart_toStartOf="@+id/enterUsernameEditText"
+        app:layout_constraintTop_toBottomOf="@+id/ageText"
+        android:paddingStart="16dp"
+        android:paddingLeft="16dp"/>
+
+    <EditText
+        android:id="@+id/weightEditText"
+        android:layout_width="145dp"
+        android:layout_height="48dp"
+        android:layout_marginTop="8dp"
+        android:inputType="text"
+        app:layout_constraintStart_toStartOf="@+id/enterUsernameEditText"
+        android:background="@drawable/square_edit_text_background"
+        app:layout_constraintTop_toBottomOf="@+id/weightText"
+        android:paddingStart="16dp"
+        android:paddingLeft="16dp" />
+
+    <TextView
+        android:id="@+id/ageText"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="36dp"
+        android:layout_marginTop="324dp"
+        android:fontFamily="@font/lato_black"
+        android:text="Age"
+        android:textColor="@color/black"
+        android:textSize="18sp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <EditText
+        android:id="@+id/enterUsernameEditText"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="160dp"
+        android:inputType="text"
+        android:background="@drawable/square_edit_text_background"
+        android:hint="Enter your username"
+        android:paddingStart="16dp"
+        android:paddingLeft="16dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.46"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <EditText
+        android:id="@+id/enterPhoneNumberText"
+        android:layout_width="257dp"
+        android:layout_height="50dp"
+        android:layout_marginTop="264dp"
+        android:inputType="text"
+        android:background="@drawable/square_edit_text_background"
+        android:hint="Enter your phone number"
+        android:paddingStart="16dp"
+        android:paddingLeft="16dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.735"
+        app:layout_constraintStart_toStartOf="@+id/spinnerPhoneNumber"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/phoneNumberText"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="28dp"
+        android:layout_marginTop="224dp"
+        android:fontFamily="@font/lato_black"
+        android:text="Phone Number"
+        android:textAlignment="center"
+        android:textColor="@color/black"
+        android:textSize="18sp"
+        android:textStyle="bold"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <EditText
+        android:id="@+id/heightEditText"
+        android:layout_width="145dp"
+        android:layout_height="48dp"
+        android:layout_marginStart="224dp"
+        android:layout_marginTop="8dp"
+        android:inputType="text"
+        android:background="@drawable/square_edit_text_background"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/heightText"
+        android:paddingStart="16dp"
+        android:paddingLeft="16dp" />
+
+    <TextView
+        android:id="@+id/heightText"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="224dp"
+        android:layout_marginTop="416dp"
+        android:fontFamily="@font/lato_black"
+        android:text="Height"
+        android:textColor="@color/black"
+        android:textSize="18sp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <Button
+        android:id="@+id/saveButton"
+        android:layout_width="250dp"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:layout_marginStart="76dp"
+        android:layout_marginTop="428dp"
+        android:backgroundTint="#4CAF50"
+        android:fontFamily="@font/lato_bold"
+        android:text="Save"
+        android:textColor="@color/white"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/userEditImage" />
+
+    <TextView
+        android:id="@+id/weightText"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="36dp"
+        android:layout_marginTop="416dp"
+        android:fontFamily="@font/lato_black"
+        android:text="Weight"
+        android:textColor="@color/black"
+        android:textSize="18sp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/usernameText"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="28dp"
+        android:layout_marginTop="120dp"
+        android:fontFamily="@font/lato_black"
+        android:text="Username"
+        android:textColor="@color/black"
+        android:textSize="18sp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>

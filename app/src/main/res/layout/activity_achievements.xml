@@ -1,0 +1,434 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/main"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    >
+
+    <!-- Back Button -->
+
+    <!-- Title TextView -->
+
+    <ImageButton
+        android:id="@+id/backButton"
+        android:layout_width="60dp"
+        android:layout_height="60dp"
+        android:layout_marginStart="10dp"
+        android:layout_marginTop="15dp"
+        android:backgroundTint="#00FFFFFF"
+        android:scaleType="fitXY"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:srcCompat="@drawable/back" />
+
+    <TextView
+        android:id="@+id/title"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="30dp"
+        android:fontFamily="@font/lato_bold"
+        android:text="Achievements"
+        android:textAlignment="center"
+        android:textColor="@color/black"
+        android:textSize="25sp"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <!-- Achievements Status TextView -->
+    <TextView
+        android:id="@+id/achievements_status"
+        android:layout_width="11dp"
+        android:layout_height="14dp"
+        android:layout_marginTop="24dp"
+        android:text="5/6"
+        android:textSize="16sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="1.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <!-- Scrollable list of achievements -->
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_marginTop="50dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/achievements_status"
+        tools:layout_editor_absoluteX="16dp">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:padding="8dp">
+
+            <!-- Achievements List - 5 Cards -->
+            <!-- Card 1 -->
+            <!-- Achievements List - Card 1 -->
+            <androidx.cardview.widget.CardView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="16dp"
+                app:cardCornerRadius="8dp"
+                app:cardElevation="4dp">
+
+                <androidx.constraintlayout.widget.ConstraintLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:padding="16dp">
+
+                    <!-- Achievement Icon -->
+                    <ImageView
+                        android:id="@+id/achievement_image1"
+                        android:layout_width="60dp"
+                        android:layout_height="60dp"
+                        android:src="@drawable/popular"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toTopOf="parent" />
+
+                    <!-- Achievement Title -->
+                    <TextView
+                        android:id="@+id/achievement_title1"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:text="Culture Curator"
+                        android:textSize="14sp"
+                        app:layout_constraintEnd_toStartOf="@id/completion_indicator1"
+                        app:layout_constraintStart_toEndOf="@id/achievement_image1"
+                        app:layout_constraintTop_toTopOf="parent" />
+
+                    <!-- Achievement Description -->
+                    <TextView
+                        android:id="@+id/achievement_description1"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:text="Obtain 1000 points using the Culture Service"
+                        android:textSize="12sp"
+                        app:layout_constraintEnd_toEndOf="@id/achievement_title1"
+                        app:layout_constraintStart_toStartOf="@id/achievement_title1"
+                        app:layout_constraintTop_toBottomOf="@id/achievement_title1" />
+
+                    <!-- Completion Indicator -->
+                    <ImageView
+                        android:id="@+id/completion_indicator1"
+                        android:layout_width="24dp"
+                        android:layout_height="24dp"
+                        android:src="@drawable/incomplete"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintTop_toTopOf="parent" />
+
+                    <!-- Progress Bar -->
+                    <ProgressBar
+                        android:id="@+id/progressBar1"
+                        style="?android:attr/progressBarStyleHorizontal"
+                        android:layout_width="0dp"
+                        android:layout_height="15dp"
+                        android:layout_marginTop="8dp"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintStart_toStartOf="@id/achievement_description1"
+                        app:layout_constraintTop_toBottomOf="@id/achievement_description1" />
+
+                </androidx.constraintlayout.widget.ConstraintLayout>
+            </androidx.cardview.widget.CardView>
+
+            <!-- Card 2 -->
+            <androidx.cardview.widget.CardView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="16dp"
+                app:cardCornerRadius="8dp"
+                app:cardElevation="4dp">
+
+                <androidx.constraintlayout.widget.ConstraintLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:padding="16dp">
+
+                    <!-- Achievement Icon -->
+                    <ImageView
+                        android:id="@+id/achievement_image2"
+                        android:layout_width="60dp"
+                        android:layout_height="60dp"
+                        android:src="@drawable/challenger"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toTopOf="parent" />
+
+                    <!-- Achievement Title -->
+                    <TextView
+                        android:id="@+id/achievement_title2"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:text="Locked In"
+                        android:textSize="14sp"
+                        android:textStyle="bold"
+                        app:layout_constraintEnd_toStartOf="@+id/completion_indicator2"
+                        app:layout_constraintStart_toEndOf="@id/achievement_image2"
+                        app:layout_constraintTop_toTopOf="parent" />
+
+                    <!-- Achievement Description -->
+
+                    <!-- Completion Indicator -->
+                    <TextView
+                        android:id="@+id/achievement_description2"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:text="Obtain 1000 points using No Phone Service"
+                        android:textSize="12sp"
+                        app:layout_constraintEnd_toEndOf="@id/achievement_title2"
+                        app:layout_constraintHorizontal_bias="0.0"
+                        app:layout_constraintStart_toStartOf="@id/achievement_title2"
+                        app:layout_constraintTop_toBottomOf="@id/achievement_title2" />
+
+                    <ImageView
+                        android:id="@+id/completion_indicator2"
+                        android:layout_width="24dp"
+                        android:layout_height="24dp"
+                        android:src="@drawable/incomplete"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintTop_toTopOf="parent" />
+
+                    <ProgressBar
+                        android:id="@+id/progressBar2"
+                        style="?android:attr/progressBarStyleHorizontal"
+                        android:layout_width="0dp"
+                        android:layout_height="15dp"
+                        android:layout_marginTop="8dp"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintStart_toStartOf="@id/achievement_description2"
+                        app:layout_constraintTop_toBottomOf="@id/achievement_description2" />
+
+                </androidx.constraintlayout.widget.ConstraintLayout>
+            </androidx.cardview.widget.CardView>
+
+            <!-- Card 2 -->
+            <androidx.cardview.widget.CardView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="16dp"
+                app:cardCornerRadius="8dp"
+                app:cardElevation="4dp">
+
+                <androidx.constraintlayout.widget.ConstraintLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:padding="16dp">
+
+                    <!-- Achievement Icon -->
+                    <ImageView
+                        android:id="@+id/achievement_image3"
+                        android:layout_width="60dp"
+                        android:layout_height="60dp"
+                        android:src="@drawable/cycling2"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toTopOf="parent" />
+
+                    <!-- Achievement Title -->
+                    <TextView
+                        android:id="@+id/achievement_title3"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="8dp"
+                        android:text="Resilient Civilian"
+                        android:textSize="14sp"
+                        android:textStyle="bold"
+                        app:layout_constraintEnd_toStartOf="@+id/completion_indicator3"
+                        app:layout_constraintStart_toEndOf="@id/achievement_image3"
+                        app:layout_constraintTop_toTopOf="parent" />
+
+                    <!-- Achievement Description -->
+                    <TextView
+                        android:id="@+id/achievement_description3"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:text="Obtain 1000 points using Cycling Service"
+                        android:textSize="12sp"
+                        app:layout_constraintEnd_toEndOf="@id/achievement_title3"
+                        app:layout_constraintStart_toStartOf="@id/achievement_title3"
+                        app:layout_constraintTop_toBottomOf="@id/achievement_title3" />
+
+                    <!-- Completion Indicator -->
+                    <ImageView
+                        android:id="@+id/completion_indicator3"
+                        android:layout_width="24dp"
+                        android:layout_height="24dp"
+                        android:src="@drawable/incomplete"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintTop_toTopOf="parent" />
+
+                    <ProgressBar
+                        android:id="@+id/progressBar3"
+                        style="?android:attr/progressBarStyleHorizontal"
+                        android:layout_width="0dp"
+                        android:layout_height="15dp"
+                        android:layout_marginTop="8dp"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintStart_toStartOf="@id/achievement_description3"
+                        app:layout_constraintTop_toBottomOf="@id/achievement_description3" />
+
+                </androidx.constraintlayout.widget.ConstraintLayout>
+            </androidx.cardview.widget.CardView>
+
+            <!-- Card 2 -->
+            <androidx.cardview.widget.CardView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="16dp"
+                app:cardCornerRadius="8dp"
+                app:cardElevation="4dp">
+
+                <androidx.constraintlayout.widget.ConstraintLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:padding="16dp">
+
+                    <!-- Achievement Icon -->
+                    <ImageView
+                        android:id="@+id/achievement_image4"
+                        android:layout_width="60dp"
+                        android:layout_height="60dp"
+                        android:src="@drawable/pathfinder"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toTopOf="parent" />
+
+                    <!-- Achievement Title -->
+                    <TextView
+                        android:id="@+id/achievement_title4"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="8dp"
+                        android:text="Pathfinder"
+                        android:textSize="14sp"
+                        android:textStyle="bold"
+                        app:layout_constraintEnd_toStartOf="@+id/completion_indicator4"
+                        app:layout_constraintStart_toEndOf="@id/achievement_image4"
+                        app:layout_constraintTop_toTopOf="parent" />
+
+                    <!-- Achievement Description -->
+                    <TextView
+                        android:id="@+id/achievement_description4"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:text="Obtain 1000 points using Running Service"
+                        android:textSize="12sp"
+                        app:layout_constraintEnd_toEndOf="@id/achievement_title4"
+                        app:layout_constraintStart_toStartOf="@id/achievement_title4"
+                        app:layout_constraintTop_toBottomOf="@id/achievement_title4" />
+
+                    <!-- Completion Indicator -->
+                    <ImageView
+                        android:id="@+id/completion_indicator4"
+                        android:layout_width="24dp"
+                        android:layout_height="24dp"
+                        android:src="@drawable/incomplete"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintTop_toTopOf="parent" />
+
+                    <ProgressBar
+                        android:id="@+id/progressBar4"
+                        style="?android:attr/progressBarStyleHorizontal"
+                        android:layout_width="0dp"
+                        android:layout_height="15dp"
+                        android:layout_marginTop="8dp"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintStart_toStartOf="@id/achievement_description4"
+                        app:layout_constraintTop_toBottomOf="@id/achievement_description4" />
+
+                </androidx.constraintlayout.widget.ConstraintLayout>
+            </androidx.cardview.widget.CardView>
+
+            <!-- Card 5 -->
+            <androidx.cardview.widget.CardView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="16dp"
+                app:cardCornerRadius="8dp"
+                app:cardElevation="4dp">
+
+                <androidx.constraintlayout.widget.ConstraintLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:padding="16dp">
+
+                    <!-- Achievement Icon -->
+                    <ImageView
+                        android:id="@+id/achievement_image5"
+                        android:layout_width="60dp"
+                        android:layout_height="60dp"
+                        android:src="@drawable/strength"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toTopOf="parent" />
+
+                    <!-- Achievement Title -->
+                    <TextView
+                        android:id="@+id/achievement_title5"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="8dp"
+                        android:text="Push-up Professional"
+                        android:textSize="14sp"
+                        android:textStyle="bold"
+                        app:layout_constraintEnd_toStartOf="@+id/completion_indicator5"
+                        app:layout_constraintStart_toEndOf="@id/achievement_image5"
+                        app:layout_constraintTop_toTopOf="parent" />
+
+                    <!-- Achievement Description -->
+                    <TextView
+                        android:id="@+id/achievement_description5"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:text="Obtain 1000 points using Push ups Service"
+                        android:textSize="12sp"
+                        app:layout_constraintEnd_toEndOf="@id/achievement_title5"
+                        app:layout_constraintStart_toStartOf="@id/achievement_title5"
+                        app:layout_constraintTop_toBottomOf="@id/achievement_title5" />
+
+                    <!-- Completion Indicator -->
+                    <ImageView
+                        android:id="@+id/completion_indicator5"
+                        android:layout_width="24dp"
+                        android:layout_height="24dp"
+                        android:src="@drawable/incomplete"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintTop_toTopOf="parent" />
+
+                    <ProgressBar
+                        android:id="@+id/progressBar5"
+                        style="?android:attr/progressBarStyleHorizontal"
+                        android:layout_width="0dp"
+                        android:layout_height="15dp"
+                        android:layout_marginTop="8dp"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintStart_toStartOf="@id/achievement_description5"
+                        app:layout_constraintTop_toBottomOf="@id/achievement_description5" />
+
+                </androidx.constraintlayout.widget.ConstraintLayout>
+            </androidx.cardview.widget.CardView>
+          
+          
+        </LinearLayout>
+    </ScrollView>
+
+    <FrameLayout
+        android:id="@+id/mainContainer"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_above="@id/navigationBar" />
+
+    <com.google.android.material.bottomnavigation.BottomNavigationView
+        android:id="@+id/navigationBar"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="-50dp"
+        app:itemTextAppearanceActive="@style/CustomBottomNavTextAppearance"
+        app:itemTextAppearanceInactive="@style/CustomBottomNavTextAppearance"
+        app:labelVisibilityMode="labeled"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:menu="@menu/bottom_nav_menu" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>
+
+

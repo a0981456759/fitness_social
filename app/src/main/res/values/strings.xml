@@ -1,0 +1,64 @@
+<resources>
+
+    <string name="app_name">Fitness_Social</string>
+    <string name="action_settings">Settings</string>
+    <!-- Strings used for fragments for navigation -->
+    <string name="first_fragment_label">First Fragment</string>
+    <string name="second_fragment_label">Second Fragment</string>
+    <string name="next">Next</string>
+    <string name="previous">Previous</string>
+    <string name="default_web_client_id">CLIENT_ID</string>
+    <string name="terms_conditions_content">
+    <![CDATA[
+        <b>1. Acceptance of Terms</b><br/><br/>
+        By accessing or using Fit-Social (the "App"), you agree to be bound by these Terms and Conditions. If you do not agree, please refrain from using the App. These terms may be updated periodically, so we encourage you to review them regularly.<br/><br/>
+
+        <b>2. User Account</b><br/><br/>
+        To access certain features of the App, you may be required to create an account using your email address and a password. Account security is managed through Google and Firebase services, and neither we nor our affiliates have access to your password. By creating an account, you confirm that the information you provide is accurate and up-to-date.<br/><br/>
+
+        <b>3. Information Collection and Use</b><br/><br/>
+        The App may collect certain personal data, including but not limited to your name, age, phone number, weight, height, and email address. Providing this data is optional and solely intended to enhance your experience within the App. We take data privacy seriously and use reasonable measures to secure all information provided.<br/><br/>
+
+        <b>4. Activity Tracking and Data Collection</b><br/><br/>
+        To support self-discipline and activity tracking features, the App may collect data on specific activities you engage in, including running, cycling, phone usage, and cultural activities when near certain locations like museums. This data is used solely for activity tracking, leaderboard rankings, and historical activity records within the App. The App requires permission to access your device\'s location, Wi-Fi, speed sensors, and other features, all of which are used exclusively for these purposes.<br/><br/>
+
+        <b>5. User Responsibilities</b><br/><br/>
+        Users are responsible for:<br/>
+        - Ensuring the accuracy of the information provided.<br/>
+        - Securing their account credentials.<br/>
+        - Adhering to local regulations while using the App’s location and activity tracking features.<br/>
+        - Using the App in a lawful manner that respects the rights and privacy of others.<br/><br/>
+
+        <b>6. Points and Leaderboard</b><br/><br/>
+        Users earn points for completing activities, and these points contribute to leaderboard rankings. These points hold no monetary value and are non-transferable. We reserve the right to modify the points system at any time.<br/><br/>
+
+        <b>7. Location-Based and Other App Permissions</b><br/><br/>
+        The App requires permissions for specific functions, including location tracking, Wi-Fi access, and sensor data for activity tracking purposes. Users may opt out of providing these permissions; however, certain features may be limited if permissions are not granted. Users may also allow or deny access at their discretion based on their device settings.<br/><br/>
+
+        <b>8. Limitation of Liability</b><br/><br/>
+        We strive to maintain the accuracy and reliability of the App but cannot guarantee uninterrupted access or error-free functionality. To the maximum extent permitted by law, we disclaim any liability for damages arising from:<br/>
+        - Use or inability to use the App.<br/>
+        - Unauthorized access to user data beyond our control.<br/>
+        - Any issues arising from third-party services (such as Google and Firebase) that support the App.<br/><br/>
+
+        <b>9. Termination</b><br/><br/>
+        We reserve the right to suspend or terminate your account if we detect misuse, breach of these terms, or unlawful behavior.<br/><br/>
+
+        <b>10. Changes to Terms and Conditions</b><br/><br/>
+        These Terms and Conditions may be updated from time to time. We will notify users of any significant changes via the App or email, and continued use of the App will constitute acceptance of the modified terms.
+    ]]>
+</string>
+
+
+
+
+    <string-array name="activity_types">
+        <item>Running</item>
+        <item>Cycling</item>
+        <item>Push Ups</item>
+        <item>No Phone Use</item>
+        <item>Culture Activity</item>
+    </string-array>
+
+
+</resources>

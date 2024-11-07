@@ -1,0 +1,164 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:padding="16dp"
+    tools:ignore="ExtraText">
+
+    <!-- Profile Image -->
+    <!-- Replace with actual image resource -->
+
+    <!-- Name and Points -->
+
+    <ImageView
+        android:id="@+id/profile_image"
+        android:layout_width="147dp"
+        android:layout_height="127dp"
+        android:src="@drawable/incomplete"
+        tools:layout_editor_absoluteX="117dp"
+        tools:layout_editor_absoluteY="73dp"
+        tools:ignore="MissingConstraints" />
+
+    <TextView
+        android:id="@+id/username"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="28dp"
+        android:text="Dylan Mleczko"
+        android:textSize="18sp"
+        android:textStyle="bold"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/profile_image" />
+
+    <TextView
+        android:id="@+id/points"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="500 pts"
+        android:textSize="14sp"
+        app:layout_constraintTop_toBottomOf="@id/username"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        android:layout_marginTop="4dp"
+        app:layout_constraintHorizontal_bias="0.5" />
+
+    <TextView
+        android:id="@+id/activity_type"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Running"
+        android:textSize="14sp"
+        app:layout_constraintTop_toBottomOf="@id/points"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        android:layout_marginTop="4dp"
+        app:layout_constraintHorizontal_bias="0.5" />
+
+    <!-- Buttons for Message, Challenge, Statistics, Achievements -->
+
+    <Button
+        android:id="@+id/message_button"
+        android:layout_width="140dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="16dp"
+        android:text="Message"
+        app:layout_constraintEnd_toStartOf="@id/challenge_button"
+        app:layout_constraintHorizontal_chainStyle="spread"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/activity_type" />
+
+    <Button
+        android:id="@+id/challenge_button"
+        android:layout_width="140dp"
+        android:layout_height="wrap_content"
+        android:text="Challenge"
+        app:layout_constraintTop_toBottomOf="@id/activity_type"
+        app:layout_constraintStart_toEndOf="@id/message_button"
+        app:layout_constraintEnd_toEndOf="parent"
+        android:layout_marginTop="16dp" />
+
+    <Button
+        android:id="@+id/statistics_button"
+        android:layout_width="140dp"
+        android:layout_height="wrap_content"
+        android:text="Statistics"
+        app:layout_constraintTop_toBottomOf="@id/message_button"
+        app:layout_constraintStart_toStartOf="@id/message_button"
+        android:layout_marginTop="8dp" />
+
+    <!-- Activity Section -->
+
+    <Button
+        android:id="@+id/achievements_button"
+        android:layout_width="140dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="8dp"
+        android:text="Achievements"
+        app:layout_constraintStart_toStartOf="@id/challenge_button"
+        app:layout_constraintTop_toBottomOf="@id/challenge_button" />
+
+    <TextView
+        android:id="@+id/activity_label"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="28dp"
+        android:text="Activity"
+        android:textSize="16sp"
+        android:textStyle="bold"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.483"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/statistics_button" />
+
+    <ImageButton
+        android:id="@+id/backButton"
+        android:layout_width="60dp"
+        android:layout_height="60dp"
+        android:layout_marginStart="10dp"
+        android:layout_marginTop="15dp"
+        android:backgroundTint="#00FFFFFF"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        android:scaleType="fitXY"
+        app:srcCompat="@drawable/back" />
+
+    <TextView
+        android:id="@+id/this_week_label"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="This Week"
+        android:textSize="14sp"
+        app:layout_constraintTop_toBottomOf="@id/activity_label"
+        app:layout_constraintStart_toStartOf="parent"
+        android:layout_marginTop="4dp"
+        app:layout_constraintEnd_toEndOf="parent" />
+
+    <!-- Charts Section (Use placeholders or real views for charts) -->
+
+
+    <ImageView
+        android:id="@+id/points_gained_chart"
+        android:layout_width="120dp"
+        android:layout_height="120dp"
+        android:src="@drawable/incomplete"
+        tools:layout_editor_absoluteX="34dp"
+        tools:layout_editor_absoluteY="494dp"
+        tools:ignore="MissingConstraints" />
+
+    <ImageView
+        android:id="@+id/points_breakdown_chart"
+        android:layout_width="120dp"
+        android:layout_height="120dp"
+        android:src="@drawable/incomplete"
+        tools:layout_editor_absoluteX="229dp"
+        tools:layout_editor_absoluteY="493dp"
+        tools:ignore="MissingConstraints" /> <!-- Replace with actual chart resource -->
+    app:layout_constraintTop_toBottomOf="@id/this_week_label"
+    app:layout_constraintStart_toEndOf="@id/points_gained_chart"
+    android:layout_marginTop="16dp"
+    app:layout_constraintEnd_toEndOf="parent" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>
